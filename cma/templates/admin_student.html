@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CMA</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css"> 
+    </head>
+    <body>
+        <header>
+            <img class="left" src="/static/images/" alt="" style="width:50px;"><p class="left"> <a href="/" > CMA </a></p> <a href="/u/{{ logname }}/">  {{ logname }}   </a></p><br><br><br>
+        </header>
+        <div id="main_text">
+            <h1>Welcome {{ logname }}!</h1>
+
+            <h2>You are managing {{firstname}} {{lastname}}'s profile</h2>
+            <a href="#"><button name="create_student_account">Update Student Account</button></a>
+            <a href="#"><button name="see_student_progress_report">See Student Progress Report</button></a>
+            <a href="/p/{{ logname }}/{{child}}/see_student_progress_report/"><button name="see_student_progress_report">Print Forms</button></a>
+        </div>
+    </body>
+</html>

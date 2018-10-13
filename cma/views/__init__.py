@@ -9,3 +9,5 @@ from cma.views.student_progress import show_student_progress
 from cma.views.student import show_student_portal
 from cma.views.math import show_student_portal_math
 from cma.views.lesson1 import show_student_portal_lesson1
+from cma.views.admin import show_admin_portal
+from cma.views.admin_selection import show_admin_selection

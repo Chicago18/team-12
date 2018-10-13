@@ -30,7 +30,7 @@ def show_login():
             return flask.redirect(flask.url_for('show_student_portal', username=username))
 
         if account["type"] == "a":
-            return flask.redirect(flask.url_for('show_student_portal', username=username))
+            return flask.redirect(flask.url_for('show_admin_portal', username=username))
 
 
     return flask.render_template("login.html")

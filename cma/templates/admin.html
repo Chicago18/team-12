@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CMA</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css"> 
+    </head>
+    <body>
+        <header>
+            <img class="left" src="/static/images/" alt="" style="width:50px;"><p class="left"> <a href="/" > CMA </a></p> <a href="/u/{{ logname }}/">  {{ logname }}   </a></p><br><br><br>
+        </header>
+        <div id="main_text">
+            <h1>Welcome {{ logname }}!</h1>
+
+            <form action="{{ url_for('show_admin_selection', username=logname) }}" method="post" enctype="multipart/form-data">
+            <div class="form_label">Student First Name</div><input type="text" name="firstname"/>
+            <div class="form_label">Student Last Name</div><input type="text" name="lastname"/>
+
+            <button class="btn btn-block btn-danger" type="submit" value="login"/>Search</button><br>
+        </div>
+    </body>
+</html>

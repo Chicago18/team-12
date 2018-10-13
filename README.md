@@ -2,8 +2,8 @@ This is a project made as part of Code For Good - Chicago hosted by JPMorgan & C
 
 
 Team members:
- * Jacob Battipaglia
- * 
- * 
- * 
- * 
+- Jacob Battipaglia
+- 
+- 
+- 
+- 

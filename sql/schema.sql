@@ -1,6 +1,8 @@
 CREATE TABLE user(
     username     VARCHAR(20)     PRIMARY KEY NOT NULL,
     password     VARCHAR(256)    NOT NULL,
+    firstname    VARCHAR(20)     NOT NULL,
+    lastname     VARCHAR(256)    NOT NULL,
     type         VARCHAR(1)      NOT NULL,
     created      TIMESTAMP       DEFAULT CURRENT_TIMESTAMP NOT NULL
 );

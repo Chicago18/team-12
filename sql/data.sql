@@ -1,8 +1,8 @@
-INSERT INTO user(username, password, type)
+INSERT INTO user(username, password, firstname, lastname, type)
 VALUES 
-("sally123", "password", "s"),
-("billy123", "password", "p"),
-("william123", "password", "a")
+("sally123", "password", "Sally", "Watson", "s"),
+("billy123", "password", "Billy", "Watson", "p"),
+("william123", "password", "William", "Smith", "a")
 ;
 
 INSERT INTO admin(username, firstname, lastname)

@@ -2,7 +2,7 @@ import os
 import sys
 import fdfgen
 
-field_names = ['studentlname', 'studentfname']
+field_names = ['lname', 'fname', 'native']
 all_fields = []
 
 for i in range(len(field_names)):

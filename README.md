@@ -7,3 +7,8 @@ Team members:
 - Tiara White-Marshall
 - Kevin Lim
 - Claudia Quinones
+
+Dependencies:
+- fdfgen
+- pdftk
+- ..and more!

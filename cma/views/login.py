@@ -24,7 +24,7 @@ def show_login():
         flask.session['username'] = username
         account = get_account_type(cma_db, username)
         if account["type"] == "p":
-            return flask.redirect(flask.url_for('show_parent_portal', username=username))
+            return flask.redirect(flask.url_for('show_student_selection', username=username))
 
         if account["type"] == "s":
             return flask.redirect(flask.url_for('show_student_portal', username=username))

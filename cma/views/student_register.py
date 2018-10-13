@@ -16,7 +16,6 @@ def add_account(cursor, firstname, lastname, username, password, acc_type):
         VALUES(?,?,?,?,?)''', (username, firstname, lastname, password, acc_type))
 
     x = cursor.execute('''SELECT * FROM user''').fetchall()
-    print(x)
 
 @cma.app.route('/p/<username>/create_student_account/', methods=['POST', 'GET'])
 def show_student_register(username):
@@ -33,6 +32,6 @@ def show_student_register(username):
                         password=password, acc_type="p")
 
         flask.session['username'] = username
-        return flask.redirect(flask.url_for('show_parent_portal'))
+        return flask.redirect(flask.url_for('show_parent_portal'), username=username)
 
     return flask.render_template("student_register.html")

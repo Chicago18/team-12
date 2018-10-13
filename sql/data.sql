@@ -24,4 +24,8 @@ INSERT INTO student(username, firstname, lastname, middleinitial, parentid,
 					currentgrade, school, disability, communityarea, registered)
 VALUES
 ("sally123", "Sally", "Watson", "K", "billy123", 3, "female", "01/01/2000", "1234567890", "Hispanic", "Spanish",
- "3", "Schoolington Elementary School", "No", "Schoolington", "Y")
+ "3", "Schoolington Elementary School", "No", "Schoolington", "Y");
+
+ INSERT INTO grades(studentid, subject, created)
+
+ VALUES ("sally123", "Math", "2018-10-13")

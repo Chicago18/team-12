@@ -15,6 +15,9 @@ def add_account(cursor, firstname, lastname, username, password, acc_type):
         INSERT INTO user(username, firstname, lastname, password, type)
         VALUES(?,?,?,?,?)''', (username, firstname, lastname, password, acc_type))
 
+    x = cursor.execute('''SELECT * FROM user''').fetchall()
+    print(x)
+
 @cma.app.route('/register/', methods=['POST', 'GET'])
 def show_register():
     """Display /account/create route."""

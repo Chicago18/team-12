@@ -10,7 +10,8 @@ import cma
 from cma import model
 
 def get_account_type (cursor, username):
-	account_type = cursor.execute('''SELECT * FROM user WHERE username=?''', (username,)).fetchall()
+    account = cursor.execute('''SELECT * FROM user WHERE username=?''', (username,)).fetchall()
+    return account[0]
 
 @cma.app.route('/login/', methods=['POST', 'GET'])
 def show_login():
@@ -21,16 +22,15 @@ def show_login():
 
         cma_db = model.get_db()
         flask.session['username'] = username
-        account_type = get_account_type(cma_db, username)
+        account = get_account_type(cma_db, username)
+        if account["type"] == "p":
+            return flask.redirect(flask.url_for('show_parent_portal', username=username))
 
-        if account_type = "p":
-            return flask.redirect(flask.url_for('show_parent_portal'))
+        if account["type"] == "s":
+            return flask.redirect(flask.url_for('show_student_portal', username=username))
 
-        if account_type = "s":
-            return flask.redirect(flask.url_for('show_student_portal'))
-
-        if account_type = "a":
-            return flask.redirect(flask.url_for('show_student_portal'))
+        if account["type"] == "a":
+            return flask.redirect(flask.url_for('show_student_portal', username=username))
 
 
     return flask.render_template("login.html")

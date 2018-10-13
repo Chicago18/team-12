@@ -2,6 +2,7 @@ import os
 import sys
 import fdfgen
 import sqlite3
+import cma as model
 
 connection = sqlite3.connect("../sql/data.sql")
 cursor = connection.cursor()

@@ -9,6 +9,9 @@ import flask
 import cma
 from cma import model
 
+def get_children(cursor, username)
+    
+
 def add_account(cursor, firstname, lastname, username, password, acc_type):
     """Add account into DB."""
     cursor.execute('''
@@ -18,9 +21,12 @@ def add_account(cursor, firstname, lastname, username, password, acc_type):
     x = cursor.execute('''SELECT * FROM user''').fetchall()
     print(x)
 
-@cma.app.route('/p/<username>/create_student_account/', methods=['POST', 'GET'])
-def show_student_register(username):
-    """Display /account/create route."""
+@cma.app.route('/p/<username>/select_student/', methods=['POST', 'GET'])
+def show_student_selection(username):
+    """Displayroute."""
+    cma_db = model.get_db()
+    students = get_children(cma_db, username)
+
     if flask.request.method == 'POST':
         firstname = flask.request.form.get('firstname', False)
         lastname = flask.request.form.get('lastname', False)
@@ -35,4 +41,4 @@ def show_student_register(username):
         flask.session['username'] = username
         return flask.redirect(flask.url_for('show_parent_portal'))
 
-    return flask.render_template("student_register.html")
+    return flask.render_template("select_student.html")

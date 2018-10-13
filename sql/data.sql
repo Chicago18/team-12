@@ -26,6 +26,9 @@ VALUES
 ("sally123", "Sally", "Watson", "K", "billy123", 3, "female", "01/01/2000", "1234567890", "Hispanic", "Spanish",
  "3", "Schoolington Elementary School", "No", "Schoolington", "Y");
 
- INSERT INTO grades(studentid, subject, created)
+ INSERT INTO grades(studentid, subject, created, value)
 
- VALUES ("sally123", "Math", "2018-10-13")
+ VALUES 
+("sally123", "Math", "2018-10-13", 90),
+("sally123", "Math", "2017-10-13", 82)
+("sally123", "Math", "2016-10-13", 76)

@@ -58,5 +58,6 @@ CREATE TABLE grades(
     studentid	    VARCHAR(20)	    NOT NULL,
     subject	    VARCHAR(20)	    NOT NULL,
     created	    TIMESTAMP	    DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    PRIMARY KEY (studentid, subject, created)
+    PRIMARY KEY (studentid, subject, created),
+    value	    INT		    NOT NULL
 );

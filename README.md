@@ -3,7 +3,7 @@ This is a project made as part of Code For Good - Chicago hosted by JPMorgan & C
 
 Team members:
 - Jacob Battipaglia
-- 
-- 
-- 
-- 
+- Anna Reece
+- Tiara White-Marshall
+- Kevin Lim
+- Claudia Quinones

@@ -1,3 +1,4 @@
+README.md
 cma/__init__.py
 cma/config.py
 cma/model.py

@@ -1,49 +1,55 @@
-CREATE TABLE users(
-   username 	VARCHAR(20) 	PRIMARY KEY NOT NULL,
-   fullname 	VARCHAR(40) 	NOT NULL,
-   email 		VARCHAR(40) 	NOT NULL,
-   filename 	VARCHAR(64) 	NOT NULL,
-   password 	VARCHAR(256) 	NOT NULL,
-   created 		TIMESTAMP 		DEFAULT CURRENT_TIMESTAMP NOT NULL
+CREATE TABLE user(
+    username     VARCHAR(20)     PRIMARY KEY NOT NULL,
+    password     VARCHAR(256)    NOT NULL,
+    firstname    VARCHAR(20)     NOT NULL,
+    lastname     VARCHAR(256)    NOT NULL,
+    type         VARCHAR(1)      NOT NULL,
+    created      TIMESTAMP       DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
-CREATE TABLE posts(
-	postid		INTEGER 		PRIMARY KEY AUTOINCREMENT,
-	filename 	VARCHAR(64) 	NOT NULL,
-	owner		VARCHAR(20) 	NOT NULL,
-	created 	TIMESTAMP 		DEFAULT CURRENT_TIMESTAMP NOT NULL,
-	CONSTRAINT fk_user
-		FOREIGN KEY (owner)
-		REFERENCES users (username)
-		ON DELETE CASCADE
+CREATE TABLE admin(
+    username    VARCHAR(20)     PRIMARY KEY NOT NULL,
+    firstname   VARCHAR(20)     NOT NULL,
+    lastname    VARCHAR(256)    NOT NULL
 );
 
-CREATE TABLE following(
-	username1	VARCHAR(20) 	NOT NULL,
-	username2	VARCHAR(20) 	NOT NULL,
-	created 	TIMESTAMP 		DEFAULT CURRENT_TIMESTAMP NOT NULL,
-	PRIMARY KEY(username1, username2)
+CREATE TABLE parent(
+    username        VARCHAR(20)     PRIMARY KEY NOT NULL,
+    firstname       VARCHAR(20)     NOT NULL,
+    lastname        VARCHAR(256)    NOT NULL,
+    familytype      VARCHAR(50)     NOT NULL,
+    housingstatus   VARCHAR(50)     NOT NULL,
+    foodstamps      VARCHAR(3)      NOT NULL,
+    reducedlunch    VARCHAR(3)      NOT NULL,
+    insurance       VARCHAR(3)      NOT NULL,
+    referral        VARCHAR(256)    NOT NULL,
+    clientid        int,
+    incomesource1   CHAR(1)         NOT NULL,
+    incomesource2   CHAR(1)         NOT NULL,
+    incomesource3   CHAR(1)         NOT NULL,    
+    incomesource4   CHAR(1)         NOT NULL,
+    incomesource5   CHAR(1)         NOT NULL,
+    incomesource6   CHAR(1)         NOT NULL,
+    incomesource7   CHAR(1)         NOT NULL,
+    incomesource8   CHAR(1)         NOT NULL
 );
 
-CREATE TABLE comments(
-	commentid 	INTEGER 		PRIMARY KEY AUTOINCREMENT,
-	owner		VARCHAR(20)		NOT NULL,
-	postid		INT 			NOT NULL,
-	text		VARCHAR(1024)	NOT NULL,
-	created 	TIMESTAMP 		DEFAULT CURRENT_TIMESTAMP NOT NULL,
-	CONSTRAINT fk_user
-		FOREIGN KEY (owner)
-		REFERENCES users (username)
-		ON DELETE CASCADE
-);
-
-CREATE TABLE likes(
-	owner		VARCHAR(20),
-	postid		INT,
-	created 	TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-	PRIMARY KEY(owner, postid),
-	CONSTRAINT fk_user
-		FOREIGN KEY (owner)
-		REFERENCES users (username)
-		ON DELETE CASCADE
+CREATE TABLE student(
+    username        VARCHAR(20)     PRIMARY KEY NOT NULL,
+    firstname       VARCHAR(20)     NOT NULL,
+    lastname        VARCHAR(256)    NOT NULL,
+    middleinitial   VARCHAR(1),
+    parentid        VARCHAR(20)     NOT NULL,
+    gender          VARCHAR(6)      NOT NULL,
+    age             int             NOT NULL,
+    birthdate       TIMESTAMP       NOT NULL,
+    phonenumber     VARCHAR(10)     NOT NULL,
+    ethnicity       VARCHAR(20)     NOT NULL,
+    race            VARCHAR(256)    NOT NULL,
+    currentgrade    VARCHAR(5)      NOT NULL,
+    school          VARCHAR(256)    NOT NULL,
+    disability      VARCHAR(50),     
+    communityarea   VARCHAR(256),    
+    ward            VARCHAR(256),
+    registered      VARCHAR(1)      NOT NULL
 );

@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Stop on errors
+set -e
+
+# Sanity check command line options
+usage() {
+  echo "Usage: $0 (reset)"
+}
+
+if [ $# -ne 1 ]; then
+  usage
+  exit 1
+fi
+
+
+# Parse argument.  $1 is the first argument
+case $1 in
+  "reset")
+    echo "+ rm -rf var/cma.sqlite3 var/uploads"
+    echo "+ mkdir -p var/uploads"
+    echo "+ sqlite3 var/cma.sqlite3 < sql/schema.sql"
+    echo "+ sqlite3 var/cma.sqlite3 < sql/data.sql"
+    echo "+ cp sql/uploads/* var/uploads/"
+
+    rm -rf var/cma.sqlite3 var/uploads
+    mkdir -p var/uploads
+    sqlite3 var/cma.sqlite3 < sql/schema.sql
+    sqlite3 var/cma.sqlite3 < sql/data.sql
+    cp sql/uploads/* var/uploads/
+    ;;
+  *)
+    usage
+    exit 1
+    ;;
+esac

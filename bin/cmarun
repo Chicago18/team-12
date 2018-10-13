@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+# create
+./bin/cmadb reset
+
+#Set FLASK_DEBUG, FLASK_APP and CMA_SETTINGS environment variables
+export FLASK_DEBUG=True
+export FLASK_APP=cma
+export CMA_SETTINGS=config.py
+
+#Run the development server on port 8000
+flask run --host 0.0.0.0 --port 8000

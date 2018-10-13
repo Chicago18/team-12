@@ -1,0 +1,8 @@
+cma/__init__.py
+cma/config.py
+cma/model.py
+cma.egg-info/PKG-INFO
+cma.egg-info/SOURCES.txt
+cma.egg-info/dependency_links.txt
+cma.egg-info/requires.txt
+cma.egg-info/top_level.txt

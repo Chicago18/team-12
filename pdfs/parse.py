@@ -1,23 +1,23 @@
 import os
 import sys
 import fdfgen
-#import sqlite3?
+import sqlite3
 
-#connection = sqlite3.connect("database.sql")
-#cursor = connection.cursor()
+connection = sqlite3.connect("../sql/data.sql")
+cursor = connection.cursor()
 
 #get the username of the user
-#cursor.execute("SELECT * FROM parent WHERE username=username")
-#parent_fields = cursor.description()
-#parentdata = cursor.fetchall()
-#cursor.execute("SELECT * FROM student WHERE parentid=username")
-#student_fields = cursor.description()
-#studentdata = cursor.fetchall()
+cursor.execute("SELECT * FROM parent WHERE username=username")
+parent_fields = cursor.description()
+parentdata = cursor.fetchall()
+cursor.execute("SELECT * FROM student WHERE parentid=username")
+student_fields = cursor.description()
+studentdata = cursor.fetchall()
 
-parent_fields = ['username','firstname','lastname','familytype','housingstatus','foodstamps','reducedlunch','insurance','referral','clientid','incomesource1','incomesource2','incomesource3','incomesource4','incomesource5','incomesource6','incomesource7','incomesource8']
-parentdata = ['pbatt','pgty','aspdhj','singlemom','own','no','no','yes','County Office','13632','','','','','','','','']
-student_fields = ['username','firstname','lastname','middleinitial','parentid','gender','age','birthdate','phonenumber','ethnicity','race','currentgrade','school','disability','communityarea','ward','registered']
-studentdata = ['jbatt','Jacob','Batipl','R','mommy','male','20','March21, 1998','908-528-2412','white','n/a','14','Rutgers','no','Piscataway','asdflkj','yes']
+#parent_fields = ['username','firstname','lastname','familytype','housingstatus','foodstamps','reducedlunch','insurance','referral','clientid','incomesource1','incomesource2','incomesource3','incomesource4','incomesource5','incomesource6','incomesource7','incomesource8']
+#parentdata = ['pbatt','pgty','aspdhj','singlemom','own','no','no','yes','County Office','13632','','','','','','','','']
+#student_fields = ['username','firstname','lastname','middleinitial','parentid','gender','age','birthdate','phonenumber','ethnicity','race','currentgrade','school','disability','communityarea','ward','registered']
+#studentdata = ['jbatt','Jacob','Batipl','R','mommy','male','20','March21, 1998','908-528-2412','white','n/a','14','Rutgers','no','Piscataway','asdflkj','yes']
 
 #def parse_form(parentdata, studentdata, parent_fields, student_fields):
 del parentdata[0:2]; del parent_fields[0:2]

@@ -34,4 +34,4 @@ def show_student_progress(username, childname):
         flask.session['username'] = username
         return flask.render_template(("parent.html"), logname=username, child=firstname)
 
-    return flask.render_template("student_register.html")
+    return flask.render_template("student_progress.html", child=childname, username=username)

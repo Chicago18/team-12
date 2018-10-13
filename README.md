@@ -14,9 +14,3 @@ Team members:
 - Tiara White-Marshall
 - Kevin Lim
 - Claudia Quinones
-
-Dependencies:
-- fdfgen
-- pdftk
-- sqlite3
-- ..and more!

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
     <head>
         <title>CMA</title>
         <link rel="stylesheet" type="text/css" href="/static/css/style.css"> 
@@ -16,5 +17,47 @@
             <a href="#"><button name="see_student_progress_report">See Student Progress Report</button></a>
             <a href="/static/images/output.pdf" download><button name="print forms">Print Forms</button></a>
         </div>
+=======
+  <head>
+    <title>CMA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+          <span class="sr-only">Toggle navigation </span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse-main">
+        <ul class="nav navbar-left">
+          <a href="/a/{{ logname }}/"><button style="margin-top: 10px;" class="btn btn-primary btn-md">{{ logname }}</button></a>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="active" href="/">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <body style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 70px; text-align: center; height: 90vh;">
+      <div id="main_text">
+          <h1>You are managing {{firstname}} {{lastname}}'s profile</h1><br>
+          <a href="#"><button class="btn btn-info" name="create_student_account">Update Student Account</button></a><tb>
+          <a href="#"><button class="btn btn-info" name="see_student_progress_report">See Student Progress Report</button></a><tb>
+          <a href="output_pdf.pdf" download><button class="btn btn-info" name="print forms">Print Forms</button></a>
+      </div>
+>>>>>>> 90810ab8c8eeed185262e9f20c275730f39520bb
     </body>
 </html>

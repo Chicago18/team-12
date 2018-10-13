@@ -24,4 +24,6 @@ INSERT INTO student(username, firstname, lastname, middleinitial, parentid,
 					currentgrade, school, disability, communityarea, registered)
 VALUES
 ("sally123", "Sally", "Watson", "K", "billy123", 3, "female", "01/01/2000", "1234567890", "Hispanic", "Spanish",
+ "3", "Schoolington Elementary School", "No", "Schoolington", "Y"),
+("michael123", "Michael", "Watson", "J", "billy123", 3, "male", "01/01/2000", "1234567890", "Hispanic", "Spanish",
  "3", "Schoolington Elementary School", "No", "Schoolington", "Y");

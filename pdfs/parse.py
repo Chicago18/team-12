@@ -15,10 +15,12 @@ import cma as model
 #student_fields = cursor.description()
 #studentdata = cursor.fetchall()
 
+
+#Example data used for testing -- We would have liked to used results from SQL queries but had compatibility issues between different machines
 parent_fields = ['username','firstname','lastname','familytype','housingstatus','foodstamps','reducedlunch','insurance','referral','clientid','incomesource1','incomesource2','incomesource3','incomesource4','incomesource5','incomesource6','incomesource7','incomesource8']
-parentdata = ['pbatt','pgty','aspdhj','relative','own','n','n','y','County Office','13632','y','n','n','n','y','n','n','n']
+parentdata = ['abc123','Mrs','Smith','relative','own','n','n','y','County Office','13632','y','n','n','n','y','n','n','n']
 student_fields = ['username','firstname','lastname','middleinitial','parentid','gender','age','birthdate','phonenumber','ethnicity','race','currentgrade','school','disability','communityarea','ward','registered']
-studentdata = ['jbatt','Billy','Smith','R','mommy','male','20','March 21, 1998','908-555-2115','white','n/a','14','Rutgers','no','Piscataway','asdflkj','yes']
+studentdata = ['def456','Billy','Smith','R','abc123','male','20','March 21, 1998','908-555-2115','white','n/a','14','Rutgers','no','Piscataway','asdflkj','yes']
 
 #def parse_form(parentdata, studentdata, parent_fields, student_fields):
 del parentdata[0:3]; del parent_fields[0:3]

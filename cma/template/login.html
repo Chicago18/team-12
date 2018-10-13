@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-        <title>CMA</title>
-        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <title>CMA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 	</head>
 	<body>
-        <header>
-            <img class="left" src="/static/images/logo.png" alt="" style="width:50px;"><p class="left"> <a href="/" >CMA</a></p><p class="right"><a href="/login/">  login </a></p><br><br><br> 
-        </header>
-        
-        <form action="" method="post" enctype="multipart/form-data">
-    	    <div class="form_label">Username</div><input type="text" name="username"/> <br>
-    	    <div class="form_label">Password</div><input type="password" name="password"/> <br>
-    		  <input type="submit" value="login"/> <br>
-        </form>
-
-        <p>Don't have an account?</p>
-
-        <a href="/register/"> Register</a>
+		<div class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<div class="box">
+	  	      <form action="" method="post" enctype="multipart/form-data">
+				  	  <div class="form_label">Username</div><input type="text" name="username"/>
+		  		  	<div class="form_label">Password</div><input type="password" name="password"/><br><br>
+			  			<button class="btn btn-block btn-danger" type="submit" value="login"/>Login</button><br>
+							<a href="/index.html"><button class="btn btn-block btn-primary">Back</button></a><br><br>
+	  			  </form>
+						<p>Don't have an account?</p>
+						<a href="register.html">Register</a><br>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

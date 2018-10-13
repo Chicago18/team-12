@@ -12,7 +12,7 @@
     <div class="container">
       <div class="row">
         <div class="box">
-          <form action="" method="post" enctype="multipart/form-data">
+          <form action="{{ url_for('show_student_selection', username = username) }}" method="get" enctype="multipart/form-data">
             <div class="form_label">Student First Name</div><input type="text" name="firstname" />
             <div class="form_label">Student Middle Initial</div><input type="text" name="middleinitial" />
             <div class="form_label">Student Last Name</div><input type="text" name="lastname" />
@@ -32,7 +32,6 @@
             <button class="btn btn-primary btn-block" type="submit" name="signup" value="Register">Submit </button>
           </form>
           <br>
-          Have an account? <a href="/login/">Log in</a>
         </div>
       </div>
     </div>

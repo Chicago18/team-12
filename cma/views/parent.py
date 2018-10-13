@@ -26,4 +26,4 @@ def show_parent_portal(username, childname):
     cma_db = model.get_db()
     logname = flask.session["username"]
 
-    return flask.render_template("student_register.html")
+    return flask.render_template("parent.html", logname=username, child=childname)

@@ -53,3 +53,10 @@ CREATE TABLE student(
     ward            VARCHAR(256),
     registered      VARCHAR(1)      NOT NULL
 );
+
+CREATE TABLE grades(
+    studentid	    VARCHAR(20)	    NOT NULL,
+    subject	    VARCHAR(20)	    NOT NULL,
+    created	    TIMESTAMP	    DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    PRIMARY KEY (studentid, subject, created)
+);
